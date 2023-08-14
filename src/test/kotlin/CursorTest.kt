@@ -18,12 +18,14 @@ class CursorTest {
     @ParameterizedTest
     @MethodSource("service")
     fun unclosedRelationshipTraversalCursor(db: GraphDatabaseService) {
+        // calls first on relationship cursor and closes the transaction
         iterate(db, Iterable<Relationship>::first)
     }
 
     @ParameterizedTest
     @MethodSource("service")
     fun closedRelationshipTraversalCursor(db: GraphDatabaseService) {
+        // calls first on relationship cursor and closes the cursor before closing the transaction
         iterate(db) { it.use(Iterable<Relationship>::first) }
     }
 
