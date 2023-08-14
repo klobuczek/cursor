@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments.arguments
 import org.junit.jupiter.params.provider.MethodSource
 import org.junit.rules.TemporaryFolder
 import org.neo4j.graphdb.GraphDatabaseService
@@ -8,7 +7,6 @@ import org.neo4j.graphdb.Label
 import org.neo4j.graphdb.Relationship
 import org.neo4j.graphdb.RelationshipType
 import org.neo4j.graphdb.ResourceIterable
-import org.neo4j.graphdb.Transaction
 import org.neo4j.harness.Neo4jBuilders
 import org.neo4j.test.TestDatabaseManagementServiceBuilder
 import java.util.stream.Stream
